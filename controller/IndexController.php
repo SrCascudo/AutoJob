@@ -1,8 +1,19 @@
 <?php
-
+require_once '/opt/lampp/htdocs/AutoJob/jobs/manager/ManagerJobs.php';
 class IndexController
 {
-    function escreverConsole(){
-        print ("Clicou em Iniciar");
+
+    function startJobs(){
+       $info = ManagerJobs::create();
+       die($info);
+    }
+
+    function stopJobs(){
+        ManagerJobs::delete();
+    }
+
+    function viewJobs(){
+        $info = ManagerJobs::view();
+        die($info);
     }
 }

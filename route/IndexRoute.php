@@ -1,8 +1,16 @@
-<?php require_once 'C:\Users\johnhca\Documents\repositorio\AutoJob\controller\IndexController.php';
+<?php
+require_once '/opt/lampp/htdocs/AutoJob/controller/IndexController.php';
 
-$controller = new IndexController();
+$index = new IndexController();
 
-if (isset($_POST['btn_envio'])){
-    phpinfo(INFO_GENERAL);
-    print('Hello');
+if (isset($_POST['btn_start'])){
+    $index->startJobs();
+}
+
+if (isset($_POST['btn_stop'])){
+    $index->stopJobs();
+}
+
+if (isset($_POST['btn_view'])){
+    $index->viewJobs();
 }
