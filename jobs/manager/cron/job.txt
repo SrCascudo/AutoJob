@@ -1,0 +1,2 @@
+* * * * * php /opt/lampp/htdocs/AutoJob/jobs/LogMemory.php 
+
